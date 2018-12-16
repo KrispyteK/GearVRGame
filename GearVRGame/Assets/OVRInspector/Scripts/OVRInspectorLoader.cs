@@ -46,13 +46,16 @@ public class OVRInspectorLoader : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-		if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus)
+        if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus || true)
 		{
 			var inspectorLoaders = GameObject.FindObjectsOfType(typeof(OVRInspectorLoader));
 			if (inspectorLoaders.Length > 1)
 			{
 				Debug.LogError("More than 1 InspectorLoader in scene");
 			}
+
+            print(OVRInspector.instance);
+
 			if (!OVRInspector.instance)
 			{
 				OVRInspector inspectorPrefab = (OVRInspector)Resources.Load("Prefabs/OVRInspector", typeof(OVRInspector));
