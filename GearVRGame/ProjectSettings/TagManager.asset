@@ -11,6 +11,9 @@ TagManager:
   - Fader
   - dontmove
   - listlast
+  - GameManager
+  - ApplianceState
+  - Appliance
   layers:
   - Default
   - TransparentFX

@@ -13,11 +13,15 @@ public class GameManager : MonoBehaviour {
     [Tooltip("Modifier that influences how much energy will be wasted.")]
     public float EnergyWasteMultiplier = 1f;
 
+    public static GameManager Instance;
+
     void Awake () {
         var gameManagers = FindObjectsOfType<GameManager>();
 
         if (gameManagers.Length > 1) {
             Debug.LogError("More than 1 GameManager in scene");
+        } else {
+            Instance = this;
         }
     }
 
@@ -31,12 +35,5 @@ public class GameManager : MonoBehaviour {
 
     void DoGameOverEvent () {
 
-    }
-   
-
-    public static GameManager Instance { 
-        get {
-            return FindObjectOfType<GameManager>();
-        }
     }
 }
