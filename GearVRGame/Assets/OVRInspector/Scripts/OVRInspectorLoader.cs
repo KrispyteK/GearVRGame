@@ -54,8 +54,6 @@ public class OVRInspectorLoader : MonoBehaviour
 				Debug.LogError("More than 1 InspectorLoader in scene");
 			}
 
-            print(OVRInspector.instance);
-
 			if (!OVRInspector.instance)
 			{
 				OVRInspector inspectorPrefab = (OVRInspector)Resources.Load("Prefabs/OVRInspector", typeof(OVRInspector));
