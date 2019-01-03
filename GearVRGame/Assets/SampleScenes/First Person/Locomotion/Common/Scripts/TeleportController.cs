@@ -73,11 +73,10 @@ public class TeleportController : MonoBehaviour {
                 }
             }
 
-            if (OVRInput.GetUp(teleportButton) || Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+            if (OVRInput.GetUp(teleportButton) || Input.GetKeyUp(teleportKey))
             {
                 DoTeleport(positionIndicator.transform);
-                
-
+             
             }
         }
         else if (Physics.Raycast(pointerTransform.position, pointerTransform.forward, out hit, maxTeleportRange, teleportLayerMask))
@@ -85,7 +84,7 @@ public class TeleportController : MonoBehaviour {
             TeleportPoint tp = hit.collider.gameObject.GetComponent<TeleportPoint>();
             tp.OnLookAt();
 
-            if (teleportEnabled && !teleporting && (OVRInput.GetDown(teleportButton) || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
+            if (teleportEnabled && !teleporting && (OVRInput.GetDown(teleportButton) || Input.GetKeyDown(teleportKey)))
             {
                 StartTeleport(tp);
             }

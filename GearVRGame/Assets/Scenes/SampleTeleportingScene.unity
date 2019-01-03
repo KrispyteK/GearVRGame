@@ -6912,7 +6912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTeleportRange: 200
   teleportButton: 1
-  teleportKey: 32
+  teleportKey: 324
   pointerTransform: {fileID: 1467814964}
   allowRotation: 1
   allowForRealHeadRotation: 1
