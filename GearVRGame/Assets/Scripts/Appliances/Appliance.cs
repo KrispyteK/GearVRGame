@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class Appliance : MonoBehaviour {
+public class Appliance : MonoBehaviour, IInteractable {
 
     [HideInInspector] public List<GameObject> StateObjects = new List<GameObject>();
     [HideInInspector] public int CurrentStateIndex = 0;
@@ -21,6 +21,12 @@ public class Appliance : MonoBehaviour {
 
         CurrentStateObject = StateObjects[0];
         CurrentStateObject.SetActive(true);
+    }
+
+    public void ResetState () {
+        CurrentStateIndex = 0;
+
+        SetCurrentStateObject();
     }
 
     public void IncreaseState () {
@@ -43,6 +49,10 @@ public class Appliance : MonoBehaviour {
         CurrentStateObject.SetActive(false);
         CurrentStateObject = StateObjects[CurrentStateIndex];
         CurrentStateObject.SetActive(true);
+    }
+
+    public void OnInteract() {
+        ResetState();
     }
 
     [MenuItem("Appliances/Create Appliance")]
