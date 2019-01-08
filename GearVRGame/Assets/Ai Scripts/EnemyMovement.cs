@@ -15,18 +15,6 @@ public class EnemyMovement : MonoBehaviour {
 
     public Vector2 goal;
 
-    private void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
-    private void Update()
-    {
-        moveToB();
-        new goal = (Random.RandomRange(10,100), Random.RandomRange(10, 100))
-    }
-    private void moveToB()
-    {
-        
     }
 
     // Use this for initialization
@@ -61,5 +49,4 @@ public class EnemyMovement : MonoBehaviour {
 
         return navHit.position;
     }*/
-}
 
