@@ -10,6 +10,10 @@ public class Appliance : MonoBehaviour, IInteractable {
     [HideInInspector] public GameObject CurrentStateObject;
 
     void Start () {
+        InitialiseStates();
+    }
+
+    public void InitialiseStates () {
         for (var i = 0; i < transform.childCount; i++) {
             var child = transform.GetChild(i).gameObject;
 
@@ -62,12 +66,15 @@ public class Appliance : MonoBehaviour, IInteractable {
         gameObject.AddComponent<Appliance>();
         gameObject.tag = "Appliance";
 
+        Selection.activeObject = gameObject;
+
         // Create appliance state and parent that to the object
         ApplianceState.CreateApplianceState();
         GameObjectUtility.SetParentAndAlign(Selection.activeObject as GameObject, gameObject);
 
         // Register the creation in the undo system
         Undo.RegisterCreatedObjectUndo(gameObject, "Create " + gameObject.name);
+
         Selection.activeObject = gameObject;
     }
 }

@@ -29,16 +29,28 @@ public class ApplianceState : MonoBehaviour {
 
     [MenuItem("Appliances/Create State")]
     public static void CreateApplianceState () {
+        if (!(Selection.activeObject is GameObject)) {
+            throw new System.Exception("Please select an appliance GameObject.");
+        }
+
+        var parent = (Selection.activeObject as GameObject).transform.root.gameObject;
+
+        if (parent.tag != "Appliance") {
+            throw new System.Exception("Appliance states have to be attached to appliances.");
+        }
+
         // Create a custom game object
         var gameObject = new GameObject("Appliance State");
         gameObject.AddComponent<ApplianceState>();
         gameObject.tag = "ApplianceState";
 
         // Ensure it gets reparented if this was a context click (otherwise does nothing)
-        GameObjectUtility.SetParentAndAlign(gameObject, (Selection.activeObject as GameObject).transform.root.gameObject);
+        GameObjectUtility.SetParentAndAlign(gameObject, parent);
 
         // Register the creation in the undo system
         Undo.RegisterCreatedObjectUndo(gameObject, "Create " + gameObject.name);
         Selection.activeObject = gameObject;
+
+        parent.GetComponent<Appliance>().InitialiseStates();
     }
 }
