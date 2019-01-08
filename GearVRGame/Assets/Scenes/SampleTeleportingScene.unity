@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StateObjects: []
-  CurrentStateIndex: 0
+  CurrentStateIndex: 8
   CurrentStateObject: {fileID: 0}
 --- !u!4 &359672471
 Transform:
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 463303357}
   - component: {fileID: 463303351}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1603,6 +1603,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4984382431213272, guid: 3cced3ae8fc807844bfec1773958e4bc, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380723738582716, guid: 3cced3ae8fc807844bfec1773958e4bc, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295884279976308, guid: 3cced3ae8fc807844bfec1773958e4bc, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384687589734032, guid: 3cced3ae8fc807844bfec1773958e4bc, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

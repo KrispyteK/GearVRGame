@@ -12,8 +12,25 @@ public class EnemyMovement : MonoBehaviour {
     private NavMeshAgent agent;
     private float timer;
 
+
+    public Vector2 goal;
+
+    private void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
+    private void Update()
+    {
+        moveToB();
+        new goal = (Random.RandomRange(10,100), Random.RandomRange(10, 100))
+    }
+    private void moveToB()
+    {
+        
+    }
+
     // Use this for initialization
-    void OnEnable()
+    /*void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
         timer = wanderTimer;
@@ -43,6 +60,6 @@ public class EnemyMovement : MonoBehaviour {
         NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
 
         return navHit.position;
-    }
+    }*/
 }
 
