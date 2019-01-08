@@ -65,6 +65,7 @@ public class Appliance : MonoBehaviour, IInteractable {
         var gameObject = new GameObject("Appliance");
         gameObject.AddComponent<Appliance>();
         gameObject.tag = "Appliance";
+        gameObject.layer = LayerMask.NameToLayer("Appliance");
 
         Selection.activeObject = gameObject;
 
