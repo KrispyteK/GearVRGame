@@ -82,16 +82,14 @@ public class TeleportController : MonoBehaviour {
         else if (Physics.Raycast(pointerTransform.position, pointerTransform.forward, out hit, maxTeleportRange, teleportLayerMask))
         {
             TeleportPoint tp = hit.collider.gameObject.GetComponent<TeleportPoint>();
-            tp.OnLookAt();
+            if (tp != null) {
+                tp.OnLookAt();
 
-            if (teleportEnabled && !teleporting && (OVRInput.GetDown(teleportButton) || Input.GetKeyDown(teleportKey)))
-            {
-                StartTeleport(tp);
-            }
-            
-        }
-        
-
+                if (teleportEnabled && !teleporting && (OVRInput.GetDown(teleportButton) || Input.GetKeyDown(teleportKey))) {
+                    StartTeleport(tp);
+                }
+            }           
+        }    
 	}
 
     void StartTeleport(TeleportPoint tp)
@@ -130,8 +128,6 @@ public class TeleportController : MonoBehaviour {
             yield return null;
             fadeLevel += fadeSpeed * Time.deltaTime;
             fadeLevel = Mathf.Clamp01(fadeLevel);
-
-            print(OVRInspector.instance);
 
             OVRInspector.instance.fader.SetFadeLevel(fadeLevel);
         }
