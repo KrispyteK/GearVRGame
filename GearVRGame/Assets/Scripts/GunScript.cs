@@ -1,26 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour {
 
     public float damage = 1f;
     public float range = 100f;
 
+    public int maxAmmo = 10;
+    private int currentAmmo;
+    public float reloadTime = 1f;
+
     public Camera fpsCam;
     public ParticleSystem Muzzleflash;
     public AudioSource Shootingsound;
-	// Update is called once per frame
-	void Update () {
 
-        if (Input.GetButtonDown("Fire1"))
+    public GameObject AmmoDisplay;
+
+    // Update is called once per frame
+
+    private void Start()
+    {
+        currentAmmo = maxAmmo;
+    }
+
+    void Update () {
+        if (Input.GetButtonDown("Fire1") && currentAmmo > 0)
         {
-            Muzzleflash.Play();
-            Shootingsound.Play();
-            Shoot();
+                currentAmmo--;
+                Muzzleflash.Play();
+                Shootingsound.Play();
+                Shoot();
         }
-		
-	}
+        if (Input.GetButtonDown("Fire4"))
+        {
+            currentAmmo = maxAmmo;
+        }
+
+        AmmoDisplay.GetComponent<Text>().text = "" + currentAmmo;
+
+    }
     void Shoot ()
     {
         RaycastHit hitInfo;
