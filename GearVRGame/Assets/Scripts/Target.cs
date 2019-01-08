@@ -11,6 +11,7 @@ public class Target : MonoBehaviour {
         health -= amount;
         if (health < 1)
         {
+            Progress.progress++;
             Die();
         }
     }
