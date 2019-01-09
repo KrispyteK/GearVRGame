@@ -813,8 +813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointerTransform: {fileID: 0}
   MaxInteractRange: 3
-  InteractButton: 0
-  InteractKey: 0
+  InteractButton: 1
+  InteractKey: 324
 --- !u!114 &114412697614543216
 MonoBehaviour:
   m_ObjectHideFlags: 1
