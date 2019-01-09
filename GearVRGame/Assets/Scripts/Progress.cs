@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Progress : MonoBehaviour {
 
-    public static int progress = 0;
+    public static int progress = 100;
     public Slider progressBar;
 
 	// Update is called once per frame
