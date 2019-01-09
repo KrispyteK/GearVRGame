@@ -171,6 +171,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4264747508824092}
   - component: {fileID: 114713928806222630}
+  - component: {fileID: 65020781583755498}
+  - component: {fileID: 114773316243057804}
   m_Layer: 19
   m_Name: Radiator
   m_TagString: Appliance
@@ -2590,6 +2592,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1507271578439586}
   m_Mesh: {fileID: 4300000, guid: e1bba1c3859b3b24dbfaf2742d70ac98, type: 3}
+--- !u!65 &65020781583755498
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1094686948682270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.53, z: 0.54}
+  m_Center: {x: -0.06, y: 0.04, z: -0.06}
 --- !u!108 &108327631330176502
 Light:
   m_ObjectHideFlags: 1
@@ -2707,6 +2721,17 @@ MonoBehaviour:
   - {fileID: 1259598714278436}
   CurrentStateIndex: 0
   CurrentStateObject: {fileID: 1072740068241190}
+--- !u!114 &114773316243057804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1094686948682270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb768034b258f6545a86e54e82687f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114821020276913102
 MonoBehaviour:
   m_ObjectHideFlags: 1

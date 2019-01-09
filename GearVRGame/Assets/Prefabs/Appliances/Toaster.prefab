@@ -528,6 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4370693091686530}
   - component: {fileID: 114630931319351184}
+  - component: {fileID: 65282641055617856}
   m_Layer: 19
   m_Name: Toaster
   m_TagString: Appliance
@@ -1194,6 +1195,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1205249729758494}
   m_Mesh: {fileID: 4300000, guid: 76b1a40a3e756c04cacd4e651769bf7e, type: 3}
+--- !u!65 &65282641055617856
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938138800757324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.15, z: 0.15}
+  m_Center: {x: -0.01, y: 0, z: -0.02}
 --- !u!108 &108013493914605574
 Light:
   m_ObjectHideFlags: 1
