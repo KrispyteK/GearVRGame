@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Progress : MonoBehaviour {
 
-    public static int progress = 100;
+    public GameManager GameManager;
     public Slider progressBar;
 
     public static bool TVOn = true;
@@ -19,7 +19,7 @@ public class Progress : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        progressBar.value = progress;
+        progressBar.value = (GameManager.TargetEnergy - GameManager.EnergyWastage) / GameManager.TargetEnergy * 100;
 	}
 
     void EnergyCheck()
@@ -28,11 +28,11 @@ public class Progress : MonoBehaviour {
         {
             if (TVStage1)
             {
-                progress -= 1;
+                progressBar.value -= 1;
             }
             if (TVStage2)
             {
-                progress -= 2;
+                progressBar.value -= 2;
             }
         }
     }
