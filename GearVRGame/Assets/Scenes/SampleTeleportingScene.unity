@@ -617,6 +617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359400301}
   - component: {fileID: 359400302}
+  - component: {fileID: 359400303}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -692,6 +693,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &359400303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359400300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a160ba7663c60c40afb971dab608c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 359400302}
 --- !u!1 &359672469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,7 +2072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetEnergy: 10000
   EnergyWastage: 0
-  EnergyWasteMultiplier: 1
+  EnergyWasteMultiplier: 10
 --- !u!4 &1553112659
 Transform:
   m_ObjectHideFlags: 0

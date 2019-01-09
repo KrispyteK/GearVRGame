@@ -10,6 +10,7 @@ public class GunScript : MonoBehaviour {
 
     public int maxAmmo = 10;
     private int currentAmmo;
+    private int AmmoCost = 100;
     public float reloadTime = 1f;
 
     public Camera fpsCam;
@@ -17,11 +18,13 @@ public class GunScript : MonoBehaviour {
     public AudioSource Shootingsound;
 
     public GameObject AmmoDisplay;
+    GameManager GameManager;
 
     // Update is called once per frame
 
     private void Start()
     {
+        GameManager = GameManager.Instance;
         currentAmmo = maxAmmo;
     }
 
@@ -33,9 +36,10 @@ public class GunScript : MonoBehaviour {
                 Shootingsound.Play();
                 Shoot();
         }
-        if (Input.GetButtonDown("Fire4"))
+        if (Input.GetButtonDown("Fire4") && currentAmmo < maxAmmo)
         {
             currentAmmo = maxAmmo;
+            GameManager.EnergyWastage += AmmoCost;
         }
 
         AmmoDisplay.GetComponent<Text>().text = "" + currentAmmo;
