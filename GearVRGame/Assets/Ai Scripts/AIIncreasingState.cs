@@ -31,7 +31,9 @@ public class AIIncreasingState : MonoBehaviour {
             foreach (var c in colliders) {
                 float distance = (c.gameObject.transform.position - gameObject.transform.position).magnitude;
 
+                // ignore object if its the previous one we affected
                 if (c.gameObject == previousAppliance) continue;
+                // ignore object if its already at its last state
                 if (c.gameObject.GetComponent<Appliance>().IsAtMaxState()) continue;
 
                 if (distance > closestDistance) {
@@ -54,6 +56,7 @@ public class AIIncreasingState : MonoBehaviour {
     IEnumerator AffectAppliance (GameObject appliance) {
         agent.destination = appliance.transform.position;
 
+        // Wait untill we reached the destination
         while (Vector3.Distance(appliance.transform.position, transform.position) > 1f) {
             yield return null;
         }
@@ -61,7 +64,7 @@ public class AIIncreasingState : MonoBehaviour {
         IsAffectingAppliance = false;
         appliance.GetComponent<Appliance>().IncreaseState();
 
-        // Wait
+        // Set next destination
         StartCoroutine(GetComponent<EnemyMovement>().NextLocation());
     }
 }
