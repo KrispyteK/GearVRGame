@@ -8,10 +8,9 @@ public class GunScript : MonoBehaviour {
     public float damage = 1f;
     public float range = 100f;
 
-    public int maxAmmo = 10;
+    public int maxAmmo = 5;
     private int currentAmmo;
     private int AmmoCost = 100;
-    public float reloadTime = 1f;
 
     public Camera fpsCam;
     public ParticleSystem Muzzleflash;
