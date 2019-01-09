@@ -1,47 +1,67 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AIIncreasingState : MonoBehaviour {
 
-    public Vector3 position;
-    public int radius = 100;
-    public bool go = false;
-    private float speed = 3.5f;
+    public LayerMask LayerMask;
+    public int Radius = 100;
 
-    private void Start()
-    {
-        position = gameObject.transform.position;
-        checkForAppliance();
+    [HideInInspector]
+    public bool IsAffectingAppliance = false;
+
+    private NavMeshAgent agent;
+    // The appliance we previously affected
+    private GameObject previousAppliance;
+
+    void Start() {
+        agent = GetComponent<NavMeshAgent>();
+
+        IsAffectingAppliance = false;
     }
 
-    public void checkForAppliance()
-    {
-        var colliders = Physics.OverlapSphere(position, radius, LayerMask.NameToLayer("Appliance"));
-        var closestDistance = 0f;
-        GameObject closest = null;
+    public void CheckForAppliances() {
+        // Only do logic if we're not already affecting an appliance
+        if (!IsAffectingAppliance) {
+            var colliders = Physics.OverlapSphere(gameObject.transform.position, Radius, LayerMask);
+            var closestDistance = 0f;
+            GameObject closest = null;
 
-        foreach (var c in colliders)
-        {
+            foreach (var c in colliders) {
+                float distance = (c.gameObject.transform.position - gameObject.transform.position).magnitude;
 
-            float distance = (c.gameObject.transform.position - position).magnitude;
-            Debug.Log(distance);
-            if (distance > closestDistance)
-            {
-                closestDistance = distance;
-                closest = c.gameObject;
-                Debug.Log("found "+ c.gameObject.name);
+                if (c.gameObject == previousAppliance) continue;
+                if (c.gameObject.GetComponent<Appliance>().IsAtMaxState()) continue;
+
+                if (distance > closestDistance) {
+                    closestDistance = distance;
+                    closest = c.gameObject;
+                }
+            }
+
+            if (closest != null) {
+                agent.destination = closest.transform.position;
+                previousAppliance = closest;
+
+                IsAffectingAppliance = true;
+
+                StartCoroutine(AffectAppliance(closest));
             }
         }
-
-
-        if (closest != null)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, closest.transform.position, speed * Time.deltaTime);
-            Debug.Log("changed");
-            go = true;
-            closest.GetComponent<Appliance>().IncreaseState();
-        }
     }
 
+    IEnumerator AffectAppliance (GameObject appliance) {
+        agent.destination = appliance.transform.position;
+
+        while (Vector3.Distance(appliance.transform.position, transform.position) > 1f) {
+            yield return null;
+        }
+
+        IsAffectingAppliance = false;
+        appliance.GetComponent<Appliance>().IncreaseState();
+
+        // Wait
+        StartCoroutine(GetComponent<EnemyMovement>().NextLocation());
+    }
 }

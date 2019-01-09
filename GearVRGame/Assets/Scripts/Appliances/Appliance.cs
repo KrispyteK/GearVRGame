@@ -9,6 +9,10 @@ public class Appliance : MonoBehaviour, IInteractable {
     [HideInInspector] public int CurrentStateIndex = 0;
     [HideInInspector] public GameObject CurrentStateObject;
 
+    public bool IsAtMaxState () {
+        return CurrentStateIndex == StateObjects.Count - 1;
+    }
+
     void Start () {
         InitialiseStates();
     }
