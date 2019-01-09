@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour {
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        stuff = GameObject.FindGameObjectsWithTag("Appliances");
+        stuff = GameObject.FindGameObjectsWithTag("Appliance");
 
     }
     private void Update()

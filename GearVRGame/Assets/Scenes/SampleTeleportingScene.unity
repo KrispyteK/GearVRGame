@@ -839,7 +839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wanderRadius: 5
   wanderTimer: 1
-  goal: {x: 0, y: 0}
+  goal: {x: 0, y: 0, z: 0}
 --- !u!195 &463303352
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1951,10 +1951,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 126280, guid: b7e37dc0f600f9b4cace829b5f2760d7, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e37dc0f600f9b4cace829b5f2760d7, type: 2}
   m_IsPrefabAsset: 0
@@ -2518,7 +2514,7 @@ GameObject:
   - component: {fileID: 2110970204}
   - component: {fileID: 2110970203}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: NavMeshSurface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2541,7 +2537,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1048375
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -2551,7 +2547,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: e01cf8d797b72724781c80a0a885d34a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: bbbcef2d321fc3c42999a6d4122d7f6c, type: 2}
 --- !u!4 &2110970204
 Transform:
   m_ObjectHideFlags: 0
