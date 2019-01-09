@@ -32,7 +32,7 @@ public class AIIncreasingState : MonoBehaviour {
                 float distance = (c.gameObject.transform.position - gameObject.transform.position).magnitude;
 
                 // ignore object if its the previous one we affected
-                if (c.gameObject == previousAppliance) continue;
+                //if (c.gameObject == previousAppliance) continue;
                 // ignore object if its already at its last state
                 if (c.gameObject.GetComponent<Appliance>().IsAtMaxState()) continue;
 

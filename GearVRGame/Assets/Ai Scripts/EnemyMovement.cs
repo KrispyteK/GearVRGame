@@ -12,6 +12,8 @@ public class EnemyMovement : MonoBehaviour {
     private NavMeshAgent agent;
     private float timer;
 
+    public bool gettingNewLocation;
+
     public bool letsGo;
 
     private void Start()
@@ -23,16 +25,15 @@ public class EnemyMovement : MonoBehaviour {
     }
 
     private void Update() {
-        // Only do something if we're standing still
-        if (agent.remainingDistance == 0)
-        {
-            GetComponent<AIIncreasingState>().CheckForAppliances();
 
-            // CheckForAppliances did not affect any appliances -> go to another location
+        if (!agent.hasPath) {
             if (!GetComponent<AIIncreasingState>().IsAffectingAppliance) {
+                GetComponent<AIIncreasingState>().CheckForAppliances();
+            } else if (!gettingNewLocation) {
                 StartCoroutine(NextLocation());
             }
         }
+
     }
 
     Vector3 GetRandomLocation()
@@ -50,11 +51,14 @@ public class EnemyMovement : MonoBehaviour {
     }
 
     public IEnumerator NextLocation() {
+        gettingNewLocation = true;
+
         // Wait for a random time between 1 and 2 seconds
         yield return new WaitForSeconds(Random.Range(1f,2f));
 
         // After waiting go to a new location
         agent.destination = GetRandomLocation();
+        gettingNewLocation = false;
     }
 
 }
