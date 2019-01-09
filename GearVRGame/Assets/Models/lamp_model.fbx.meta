@@ -31,8 +31,8 @@ ModelImporter:
     400022: transform4
     400024: transform5
     400026: transform6
-    2100000: phongE2
-    2100002: lambert1
+    2100000: lambert1
+    2100002: phongE2
     2100004: phongE1
     2100006: lambert5
     2300000: pSphere4

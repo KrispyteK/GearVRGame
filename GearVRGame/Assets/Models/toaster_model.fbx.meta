@@ -7,22 +7,26 @@ ModelImporter:
     100002: pCube2
     100004: pCube3
     100006: pCube4
-    100008: //RootNode
-    100010: transform1
-    100012: transform2
-    100014: transform3
+    100008: pCube5
+    100010: //RootNode
+    100012: transform1
+    100014: transform2
+    100016: transform3
+    100018: transform4
     400000: pCube1
     400002: pCube2
     400004: pCube3
     400006: pCube4
-    400008: //RootNode
-    400010: transform1
-    400012: transform2
-    400014: transform3
+    400008: pCube5
+    400010: //RootNode
+    400012: transform1
+    400014: transform2
+    400016: transform3
+    400018: transform4
     2100000: lambert1
-    2300000: pCube4
-    3300000: pCube4
-    4300000: pCube4
+    2300000: pCube5
+    3300000: pCube5
+    4300000: pCube5
   externalObjects: {}
   materials:
     importMaterials: 1
