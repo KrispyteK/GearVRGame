@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658d1b8519edb1345b974ec8d48ddf9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointerTransform: {fileID: 0}
+  PointerTransform: {fileID: 400002}
   MaxInteractRange: 3
   InteractButton: 1
   InteractKey: 324
