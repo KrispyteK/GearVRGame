@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class Progress : MonoBehaviour {
 
-    public GameManager GameManager;
-    static Slider progressBar;
+    public Slider progressBar;
+    GameManager GameManager;
+
+    void Start () {
+        GameManager = GameManager.Instance;
+    }
 
     // Update is called once per frame
     void Update () {
