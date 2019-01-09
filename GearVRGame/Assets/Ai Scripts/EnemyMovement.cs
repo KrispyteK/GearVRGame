@@ -13,40 +13,47 @@ public class EnemyMovement : MonoBehaviour {
     private float timer;
 
 
-    public Vector2 goal;
+    public Vector3 goal;
+    GameObject[] stuff;
 
-    }
-
-    // Use this for initialization
-    /*void OnEnable()
+    private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        timer = wanderTimer;
+        stuff = GameObject.FindGameObjectsWithTag("Appliances");
+
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= wanderTimer)
+        
+        if (agent.velocity.x == 0 && agent.velocity.y == 0 && agent.velocity.z == 0)
         {
-            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
-            agent.SetDestination(newPos);
-            timer = 0;
+            GetRandomLocation();
+            setDestinationB();
         }
+
     }
 
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    Vector3 GetRandomLocation()
     {
-        Vector3 randDirection = Random.insideUnitSphere * dist;
+            NavMeshTriangulation navMeshData = NavMesh.CalculateTriangulation();
 
-        randDirection += origin;
+            // Pick the first indice of a random triangle in the nav mesh
+            int t = Random.Range(0, navMeshData.indices.Length - 3);
 
-        NavMeshHit navHit;
+            // Select a random point on it
+            Vector3 point = Vector3.Lerp(navMeshData.vertices[navMeshData.indices[t]], navMeshData.vertices[navMeshData.indices[t + 1]], Random.value);
+            Vector3.Lerp(point, navMeshData.vertices[navMeshData.indices[t + 2]], Random.value);
+            Debug.Log(point);
+            goal = point;
+            return goal;
+       
+    }
 
-        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+    void setDestinationB()
+    {
+        agent.destination = goal;
+    }
 
-        return navHit.position;
-    }*/
+}
+
 
