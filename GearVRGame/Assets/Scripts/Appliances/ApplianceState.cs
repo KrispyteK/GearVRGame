@@ -23,7 +23,9 @@ public class ApplianceState : MonoBehaviour {
         while (true) {
             yield return new WaitForSeconds(TimeBetweenWastage);
 
-            GameManager.Instance.AddEnergyWaste(EnergyWastage);
+            if (GameManager.Instance != null) {
+                GameManager.Instance.AddEnergyWaste(EnergyWastage);
+            }
         }
     }
 

@@ -14,6 +14,8 @@ public class Appliance : MonoBehaviour, IInteractable {
     }
 
     public void InitialiseStates () {
+        StateObjects.Clear();
+
         for (var i = 0; i < transform.childCount; i++) {
             var child = transform.GetChild(i).gameObject;
 
