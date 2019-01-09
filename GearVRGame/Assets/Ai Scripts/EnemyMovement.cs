@@ -14,14 +14,15 @@ public class EnemyMovement : MonoBehaviour {
 
 
     public Vector3 goal;
-    GameObject[] stuff;
+    public bool letsGo;
+    public AIIncreasingState appliances;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        stuff = GameObject.FindGameObjectsWithTag("Appliance");
 
     }
+
     private void Update()
     {
         
@@ -29,6 +30,9 @@ public class EnemyMovement : MonoBehaviour {
         {
             GetRandomLocation();
             setDestinationB();
+            appliances.GetComponent<AIIncreasingState>().checkForAppliance();
+
+            
         }
 
     }
