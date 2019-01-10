@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 136840158161850374}
   - component: {fileID: 195700386530801762}
   - component: {fileID: 114005325217369126}
-  - component: {fileID: 114357742007257662}
-  - component: {fileID: 114583533216985386}
+  - component: {fileID: 95561338006368784}
+  - component: {fileID: 114436168643456448}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1324669795052768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3600988, y: 19.77, z: 42.7361}
+  m_LocalPosition: {x: -1.5476812, y: 1.01, z: 0.015204399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,6 +88,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1324669795052768}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &95561338006368784
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324669795052768}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29071e13391e99e44959420acb5997c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114005325217369126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
---- !u!114 &114357742007257662
+--- !u!114 &114436168643456448
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,29 +126,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1324669795052768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb4782d8fc9bf644a296f6ad3979571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wanderRadius: 5
-  wanderTimer: 1
-  gettingNewLocation: 0
-  letsGo: 0
---- !u!114 &114583533216985386
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1324669795052768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54abff2c4d8709746af44697ba08f032, type: 3}
+  m_Script: {fileID: 11500000, guid: a5aa464467521754f9a6c35ce4817db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LayerMask:
     serializedVersion: 2
     m_Bits: 524288
-  Radius: 100
-  IsAffectingAppliance: 1
+  Cooldown: 4
+  LookRadius: 4
+  TargetAppliance: {fileID: 0}
+  PreviousAppliances: []
 --- !u!136 &136840158161850374
 CapsuleCollider:
   m_ObjectHideFlags: 1
