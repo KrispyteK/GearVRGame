@@ -7,6 +7,8 @@ public class GunScript : MonoBehaviour {
 
     public float damage = 1f;
 
+    private bool aimCharger = false;
+
     public int maxAmmo = 5;
     private int currentAmmo;
     private int AmmoCost = 100;
@@ -16,6 +18,7 @@ public class GunScript : MonoBehaviour {
     public AudioSource Shootingsound;
 
     public GameObject AmmoDisplay;
+    public GameObject Charger;
     GameManager GameManager;
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class GunScript : MonoBehaviour {
     }
 
     void Update () {
+        ChargerCheck();
         if (Input.GetButtonDown("Fire1") && currentAmmo > 0)
         {
                 currentAmmo--;
@@ -34,7 +38,7 @@ public class GunScript : MonoBehaviour {
                 Shootingsound.Play();
                 Shoot();
         }
-        if (Input.GetButtonDown("Fire4") && currentAmmo < maxAmmo)
+        if (Input.GetButtonDown("Fire4") && currentAmmo < maxAmmo && aimCharger)
         {
             currentAmmo = maxAmmo;
             GameManager.EnergyWastage += AmmoCost;
@@ -51,6 +55,19 @@ public class GunScript : MonoBehaviour {
             if (target != null)
             {
                 target.TakeDamage(damage);
+            }
+        }
+    }
+
+    void ChargerCheck()
+    {
+        RaycastHit hitInfo;
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo) && hitInfo.transform.tag == "Charger")
+        {
+            Charger = hitInfo.transform.gameObject;
+            if (Charger != null)
+            {
+                aimCharger = true;
             }
         }
     }
