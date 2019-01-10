@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GunScript : MonoBehaviour {
 
     public float damage = 1f;
-    public float range = 100f;
 
     public int maxAmmo = 5;
     private int currentAmmo;
@@ -47,7 +46,7 @@ public class GunScript : MonoBehaviour {
     void Shoot ()
     {
         RaycastHit hitInfo;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, range)){
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo)){
             Target target = hitInfo.transform.GetComponent<Target>();
             if (target != null)
             {
