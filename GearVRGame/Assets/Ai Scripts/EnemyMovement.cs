@@ -27,6 +27,8 @@ public class EnemyMovement : MonoBehaviour {
     private void Update() {
 
         if (!agent.hasPath) {
+            print(GetComponent<AIIncreasingState>().IsAffectingAppliance);
+
             if (!GetComponent<AIIncreasingState>().IsAffectingAppliance) {
                 GetComponent<AIIncreasingState>().CheckForAppliances();
             } else if (!gettingNewLocation) {
