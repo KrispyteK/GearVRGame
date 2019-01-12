@@ -11,9 +11,13 @@ public class ApplianceState : MonoBehaviour {
     [Tooltip("The time between each energy-waste event.")]
     public float TimeBetweenWastage = 4f;
 
+    private EffectHandler effects;
+
     void Start () {
         OnEnable();
-	}
+
+        effects = transform.parent.Find("Effects").GetComponent<EffectHandler>();
+    }
 
 	void OnEnable () {
         StartCoroutine(WasteEnergy());
@@ -24,6 +28,8 @@ public class ApplianceState : MonoBehaviour {
             yield return new WaitForSeconds(TimeBetweenWastage);
 
             if (GameManager.Instance != null) {
+                effects.DoEffect(EnergyWastage);
+
                 GameManager.Instance.AddEnergyWaste(EnergyWastage);
             }
         }
