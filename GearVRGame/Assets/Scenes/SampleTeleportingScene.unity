@@ -2306,56 +2306,50 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+    - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_LocalPosition.x
       value: 17.1
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+    - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_LocalPosition.y
       value: 21.15
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+    - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_LocalPosition.z
       value: 38.41
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+    - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+    - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+    - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+    - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+    - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114412697614543216, guid: 126d619cf4daa52469682f85c1378b4a,
+    - target: {fileID: 114406949646454522, guid: 2ab8d53f303ceae46b72ca296866e180,
         type: 2}
       propertyPath: AmmoDisplay
       value: 
       objectReference: {fileID: 653956174}
-    - target: {fileID: 114412697614543216, guid: 126d619cf4daa52469682f85c1378b4a,
+    - target: {fileID: 114406949646454522, guid: 2ab8d53f303ceae46b72ca296866e180,
         type: 2}
       propertyPath: Charger
       value: 
       objectReference: {fileID: 1068814551}
-    - target: {fileID: 114412697614543216, guid: 126d619cf4daa52469682f85c1378b4a,
-        type: 2}
-      propertyPath: ReloadEffectPrefab
-      value: 
-      objectReference: {fileID: 1794660259304982, guid: 1a0932033b7fe6a4497da15ecef552f1,
-        type: 2}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1472933575
 Prefab:
@@ -2433,6 +2427,8 @@ MonoBehaviour:
   TargetEnergy: 10000
   EnergyWastage: 0
   EnergyWasteMultiplier: 10
+  EnemySpawnTime: 5
+  MaxEnemyCount: 10
 --- !u!4 &1553112659
 Transform:
   m_ObjectHideFlags: 0
@@ -2985,7 +2981,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.083333336
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: bbbcef2d321fc3c42999a6d4122d7f6c, type: 2}
 --- !u!4 &2110970204
