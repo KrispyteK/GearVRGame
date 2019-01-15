@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4161763148152016}
-  - component: {fileID: 114943195380060902}
   m_Layer: 19
   m_Name: Appliance State
   m_TagString: ApplianceState
@@ -1491,19 +1490,6 @@ MonoBehaviour:
   Amount: 1
   Speed: 5
   Randomness: 0
---- !u!114 &114943195380060902
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093068436555690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f15737564f5c15478109068192b9d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnergyWastage: 0
-  TimeBetweenWastage: 4
 --- !u!198 &198534139762973646
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -139,7 +139,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4304086190074920}
-  - component: {fileID: 114237383949235388}
   m_Layer: 19
   m_Name: Appliance State
   m_TagString: ApplianceState
@@ -2806,19 +2805,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114237383949235388
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1072740068241190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f15737564f5c15478109068192b9d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnergyWastage: 100
-  TimeBetweenWastage: 4
 --- !u!114 &114306191949018964
 MonoBehaviour:
   m_ObjectHideFlags: 1
