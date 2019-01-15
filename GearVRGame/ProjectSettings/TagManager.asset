@@ -16,6 +16,7 @@ TagManager:
   - Appliance
   - Charger
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -38,7 +39,7 @@ TagManager:
   - Colliders
   - Appliance
   - NavMesh
-  - 
+  - Enemy
   - 
   - 
   - 

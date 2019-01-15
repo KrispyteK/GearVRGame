@@ -26,7 +26,7 @@ public class WalkState : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (agent.remainingDistance == 0)
+        if (agent.isOnNavMesh && agent.remainingDistance == 0)
         {
             animator.SetBool("IsWalking", false);
         }

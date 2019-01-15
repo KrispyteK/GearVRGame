@@ -13,6 +13,12 @@ public class GameManager : MonoBehaviour {
     [Tooltip("Modifier that influences how much energy will be wasted.")]
     public float EnergyWasteMultiplier = 1f;
 
+    [Tooltip("Time between each enemy spawn event.")]
+    public float EnemySpawnTime = 5f;
+
+    [Tooltip("How many enemies can be in the scene at once.")]
+    public float MaxEnemyCount = 10f;
+
     public static GameManager Instance;
 
     void Awake () {

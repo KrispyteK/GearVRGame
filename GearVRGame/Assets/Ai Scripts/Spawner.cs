@@ -6,33 +6,21 @@ public class Spawner : MonoBehaviour {
 
 
     public GameObject Enemy;
-    private float timeSpawn;
-    public float startTimeSpawn;
-    static public float enemyCount;
-    public float maxEnemyCount = 1;
+    public int EnemyCount;
 
-	// Use this for initialization
 	void Start () {
-		
+        StartCoroutine(SpawnEnemies());
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
-       
-		if (enemyCount < maxEnemyCount)
-        {
-            if (timeSpawn <= 0)
-            {
+    IEnumerator SpawnEnemies () {
+        while (true) {
+            EnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-                Instantiate(Enemy, transform.position, Quaternion.identity);
-                timeSpawn = startTimeSpawn;
-                enemyCount++;
+            if (EnemyCount < GameManager.Instance.MaxEnemyCount) {
+                Instantiate(Enemy, transform.position, Quaternion.Euler(0, 0, 0));
             }
-            else
-            {
-                timeSpawn -= Time.deltaTime;
-            }
+
+            yield return new WaitForSeconds(GameManager.Instance.EnemySpawnTime);
         }
-	}
+    }
 }
