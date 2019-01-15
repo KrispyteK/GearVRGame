@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class Appliance : MonoBehaviour, IInteractable {
 
@@ -65,6 +67,7 @@ public class Appliance : MonoBehaviour, IInteractable {
         ResetState();
     }
 
+#if UNITY_EDITOR
     [MenuItem("Appliances/Create Appliance")]
     static void CreateApplianceState() {
         // Create a custom game object
@@ -84,4 +87,5 @@ public class Appliance : MonoBehaviour, IInteractable {
 
         Selection.activeObject = gameObject;
     }
+#endif
 }

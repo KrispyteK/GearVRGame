@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor;
 
 [CustomEditor(typeof(Appliance))]
@@ -21,3 +22,6 @@ public class ApplianceEditor : Editor {
         GUILayout.EndHorizontal();
     }
 }
+#else
+public class ApplianceEditor {}
+#endif
