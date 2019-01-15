@@ -9,6 +9,7 @@ public class InteractWithApplianceState : StateMachineBehaviour
     private NavMeshAgent agent;
     private GameObject appliance;
     private bool hasInteracted = false;
+    private float applianceSize = 0f;
     #endregion
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -19,13 +20,15 @@ public class InteractWithApplianceState : StateMachineBehaviour
 
         appliance = animator.gameObject.GetComponent<AIComponent>().TargetAppliance;
 
+        applianceSize = appliance.gameObject.GetComponent<Collider>().bounds.size.magnitude;
+
         animator.SetBool("IsInteractingWithAppliance", true);
 
         agent.destination = appliance.gameObject.transform.position;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (agent.remainingDistance == 0 && !hasInteracted) {
+        if (agent.remainingDistance < applianceSize && !hasInteracted) {
             appliance.GetComponent<Appliance>().IncreaseState();
 
             animator.gameObject.GetComponent<AIComponent>().StartCoolDown(appliance);

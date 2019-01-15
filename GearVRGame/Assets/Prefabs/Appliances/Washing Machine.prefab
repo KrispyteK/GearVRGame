@@ -122,6 +122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4650170051852972}
   - component: {fileID: 114742271317046070}
+  - component: {fileID: 114127938390221468}
+  - component: {fileID: 65823682967379774}
   m_Layer: 19
   m_Name: Washing Machine
   m_TagString: Appliance
@@ -398,6 +400,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189535528543770}
   m_Mesh: {fileID: 4300000, guid: 9cf11c996a0380c418a81fce5eb12996, type: 3}
+--- !u!65 &65823682967379774
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506049621115812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82346462566218112
 AudioSource:
   m_ObjectHideFlags: 1
@@ -507,6 +521,17 @@ MonoBehaviour:
   Amount: 0.5
   Speed: 5
   Randomness: 0
+--- !u!114 &114127938390221468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506049621115812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb768034b258f6545a86e54e82687f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114229604578270096
 MonoBehaviour:
   m_ObjectHideFlags: 1

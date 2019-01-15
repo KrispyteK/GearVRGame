@@ -86,6 +86,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4266249917036844}
   - component: {fileID: 114124472946518078}
+  - component: {fileID: 135732964734786024}
+  - component: {fileID: 114128153512096430}
   m_Layer: 19
   m_Name: Hairdryer
   m_TagString: Appliance
@@ -943,6 +945,17 @@ MonoBehaviour:
   - {fileID: 1446611940057926}
   CurrentStateIndex: 0
   CurrentStateObject: {fileID: 1173933888895636}
+--- !u!114 &114128153512096430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269481252725600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb768034b258f6545a86e54e82687f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114335067308227636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -995,6 +1008,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnergyWastage: 50
   TimeBetweenWastage: 1
+--- !u!135 &135732964734786024
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269481252725600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0.19, z: 0}
 --- !u!198 &198170064258851702
 ParticleSystem:
   m_ObjectHideFlags: 1

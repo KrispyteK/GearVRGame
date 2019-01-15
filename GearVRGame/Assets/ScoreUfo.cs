@@ -6,7 +6,6 @@ public class ScoreUfo : MonoBehaviour {
 
     public Renderer render;
     GameManager GameManager;
-    public float energyWaster;
     float cutOffValue;
 
     void Start()
