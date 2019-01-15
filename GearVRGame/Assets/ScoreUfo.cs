@@ -20,8 +20,10 @@ public class ScoreUfo : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        cutOffValue = 1/GameManager.TargetEnergy * GameManager.EnergyWastage;
+        cutOffValue = (GameManager.TargetEnergy - GameManager.EnergyWastage) / GameManager.TargetEnergy;
 
-        render.material.SetFloat("_Cutoff", 1-cutOffValue);
+        print(cutOffValue);
+
+        render.material.SetFloat("_Cutoff", cutOffValue);
     }
 }
