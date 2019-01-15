@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour {
 
+    public OVRInput.Button ShootButton;
+    public KeyCode ShootKey;
+
+    public OVRInput.Button ReloadButton;
+    public KeyCode ReloadKey;
+
     public float damage = 1f;
 
     private bool aimCharger = false;
@@ -31,17 +37,18 @@ public class GunScript : MonoBehaviour {
 
     void Update () {
         ChargerCheck();
-        if (Input.GetButtonDown("Fire1") && currentAmmo > 0)
+        if ((OVRInput.GetDown(ShootButton) || Input.GetKeyDown(ShootKey)) && currentAmmo > 0)
         {
                 currentAmmo--;
                 Muzzleflash.Play();
                 Shootingsound.Play();
                 Shoot();
         }
-        if (Input.GetButtonDown("Fire4") && currentAmmo < maxAmmo && aimCharger)
+        if ((OVRInput.GetDown(ReloadButton) || Input.GetKeyDown(ReloadKey)) && currentAmmo < maxAmmo && aimCharger)
         {
             currentAmmo = maxAmmo;
-            GameManager.EnergyWastage += AmmoCost;
+
+            GameManager.Instance.AddEnergyWaste(AmmoCost);
         }
 
         AmmoDisplay.GetComponent<Text>().text = "" + currentAmmo;
