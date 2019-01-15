@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour {
 
+    public LayerMask LayerMask;
+
     public OVRInput.Button ShootButton;
     public KeyCode ShootKey;
 
@@ -17,7 +19,7 @@ public class GunScript : MonoBehaviour {
 
     public int maxAmmo = 5;
     private int currentAmmo;
-    private int AmmoCost = 100;
+    public int AmmoCost = 100;
 
     public Camera fpsCam;
     public ParticleSystem Muzzleflash;
@@ -59,7 +61,7 @@ public class GunScript : MonoBehaviour {
     void Shoot ()
     {
         RaycastHit hitInfo;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo)){
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, Mathf.Infinity, LayerMask)){
             Target target = hitInfo.transform.GetComponent<Target>();
 
             var effect = Instantiate(ShootEffectPrefab);
@@ -77,7 +79,7 @@ public class GunScript : MonoBehaviour {
 
     void Reload () {
         RaycastHit hitInfo;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo) && hitInfo.transform.tag == "Charger") {
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, Mathf.Infinity, LayerMask) && hitInfo.transform.tag == "Charger") {
             Charger = hitInfo.transform.gameObject;
 
             if (Charger != null) {
