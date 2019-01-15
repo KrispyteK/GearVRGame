@@ -483,8 +483,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1282294000583316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.85, y: -0.2, z: 1.1}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.8}
+  m_LocalPosition: {x: 0, y: -0.23, z: 0.538}
+  m_LocalScale: {x: 0.09067281, y: 0.09067281, z: 0.24179417}
   m_Children:
   - {fileID: 4423131482441608}
   - {fileID: 4670480258232042}
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointerTransform: {fileID: 400002}
-  MaxInteractRange: 3
+  MaxInteractRange: 5
   InteractButton: 1
   InteractKey: 324
 --- !u!114 &114412697614543216
@@ -826,14 +826,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f038058849d294084995197e42c6ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShootButton: 2
+  ShootKey: 323
+  ReloadButton: 4
+  ReloadKey: 114
   damage: 1
-  range: 100
-  maxAmmo: 10
-  reloadTime: 1
+  maxAmmo: 5
   fpsCam: {fileID: 2037080}
   Muzzleflash: {fileID: 198121285436004862}
   Shootingsound: {fileID: 82933430453963770}
   AmmoDisplay: {fileID: 0}
+  Charger: {fileID: 0}
 --- !u!114 &114473266101150724
 MonoBehaviour:
   m_ObjectHideFlags: 1
