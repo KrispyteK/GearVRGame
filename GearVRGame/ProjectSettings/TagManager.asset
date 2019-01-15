@@ -15,6 +15,7 @@ TagManager:
   - ApplianceState
   - Appliance
   - Charger
+  - Ground
   layers:
   - Default
   - TransparentFX
