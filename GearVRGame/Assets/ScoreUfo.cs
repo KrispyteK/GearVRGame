@@ -22,8 +22,6 @@ public class ScoreUfo : MonoBehaviour {
     {
         cutOffValue = (GameManager.TargetEnergy - GameManager.EnergyWastage) / GameManager.TargetEnergy;
 
-        print(cutOffValue);
-
         render.material.SetFloat("_Cutoff", cutOffValue);
     }
 }
