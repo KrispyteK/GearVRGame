@@ -5,6 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour {
 
     public float health = 5f;
+    public static bool isGrounded = false;
 
     public void TakeDamage (float amount)
     {
@@ -18,6 +19,13 @@ public class Target : MonoBehaviour {
     public void Die()
     {
         Destroy(gameObject);
+    }
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
     }
 
 }
