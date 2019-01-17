@@ -779,10 +779,10 @@ MonoBehaviour:
   LayerMask:
     serializedVersion: 2
     m_Bits: 4159287
-  ShootButton: 2
+  ShootButton: 128
   ShootKey: 323
-  ReloadButton: 4
-  ReloadKey: 325
+  ReloadButton: 128
+  ReloadKey: 323
   damage: 1
   maxAmmo: 10
   AmmoCost: 1000
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTeleportRange: 200
-  teleportButton: 1
+  teleportButton: 64
   teleportKey: 324
   pointerTransform: {fileID: 4856322558742402}
   allowRotation: 1
