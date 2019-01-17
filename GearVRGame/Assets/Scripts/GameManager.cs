@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    [Tooltip("How long the player has to survive for. (In seconds)")]
+    public float TotalGameTime = 300f;
+
     [Tooltip("The amount of energy needed to trigger a game-over event.")]
     public float TargetEnergy = 10000f;
 
@@ -26,6 +29,8 @@ public class GameManager : MonoBehaviour {
 
     public GameObject[] EnableOnGameplayStart;
 
+    public float TotalTime = 0f;
+
     void Awake () {
         SetGameStarted(false);
 
@@ -38,14 +43,25 @@ public class GameManager : MonoBehaviour {
         }
 
         if (GameObject.FindGameObjectWithTag("IntroSequence") == null) SetGameStarted(true);
+    }
 
+    void Update() {
+        if (GamePlayStarted) {
+            TotalTime += Time.deltaTime;
+
+            if (TotalTime > TotalGameTime) {
+                DoWinEvent();
+            }
+        }
     }
 
     public void AddEnergyWaste (float amount) {
-        EnergyWastage += amount * EnergyWasteMultiplier;
+        if (GamePlayStarted) {
+            EnergyWastage += amount * EnergyWasteMultiplier;
 
-        if (EnergyWastage >= TargetEnergy) {
-            DoGameOverEvent();
+            if (EnergyWastage >= TargetEnergy && TotalTime < TotalGameTime) {
+                DoGameOverEvent();
+            }
         }
     }
 
@@ -58,6 +74,12 @@ public class GameManager : MonoBehaviour {
     }
 
     void DoGameOverEvent () {
+        SetGameStarted(false);
+        print("GAME OVER");
+    }
 
+    void DoWinEvent() {
+        SetGameStarted(false);
+        print("WIN");
     }
 }

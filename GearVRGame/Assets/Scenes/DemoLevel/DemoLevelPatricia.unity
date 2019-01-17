@@ -3038,6 +3038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6d4c13f504bd74980e1fabeb1687bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TotalGameTime: 300
   TargetEnergy: 500000
   EnergyWastage: 0
   EnergyWasteMultiplier: 1
@@ -3048,6 +3049,7 @@ MonoBehaviour:
   - {fileID: 218825337}
   - {fileID: 39947412}
   - {fileID: 771013154}
+  TotalTime: 0
 --- !u!4 &988932631
 Transform:
   m_ObjectHideFlags: 0
