@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class IntroSequence : MonoBehaviour {
 
-    public AudioSource IntroAudioSource;
     public RoofAnimation RoofAnimation;
+    private AudioSource IntroAudioSource;
+
+    void Start () {
+        IntroAudioSource = GetComponent<AudioSource>();
+    }
 
 	void Update () {
 		if (!IntroAudioSource.isPlaying && !GameManager.Instance.GamePlayStarted) {

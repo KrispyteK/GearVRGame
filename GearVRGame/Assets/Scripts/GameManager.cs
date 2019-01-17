@@ -25,9 +25,12 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public bool GamePlayStarted = false;
 
+
     public static GameManager Instance;
 
     public GameObject[] EnableOnGameplayStart;
+    public AudioSource WinGameSource;
+    public AudioClip WinGameClip;
 
     public float TotalTime = 0f;
 
@@ -81,5 +84,8 @@ public class GameManager : MonoBehaviour {
     void DoWinEvent() {
         SetGameStarted(false);
         print("WIN");
+
+        WinGameSource.clip = WinGameClip;
+        WinGameSource.Play();
     }
 }
