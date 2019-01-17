@@ -3008,7 +3008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalGameTime: 300
-  TargetEnergy: 500000
+  TargetEnergy: 200000
   EnergyWastage: 0
   EnergyWasteMultiplier: 1
   EnemySpawnTime: 5
@@ -3020,7 +3020,7 @@ MonoBehaviour:
   - {fileID: 771013154}
   WinGameSource: {fileID: 2126811693}
   WinGameClip: {fileID: 8300000, guid: 5d41a5c381f0d474a8a33cbd5b72047e, type: 3}
-  TotalTime: 290
+  TotalTime: 0
 --- !u!4 &988932631
 Transform:
   m_ObjectHideFlags: 0
