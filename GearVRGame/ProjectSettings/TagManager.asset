@@ -17,6 +17,7 @@ TagManager:
   - Charger
   - Ground
   - Enemy
+  - IntroSequence
   layers:
   - Default
   - TransparentFX

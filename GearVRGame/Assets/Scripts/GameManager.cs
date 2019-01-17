@@ -19,9 +19,16 @@ public class GameManager : MonoBehaviour {
     [Tooltip("How many enemies can be in the scene at once.")]
     public float MaxEnemyCount = 10f;
 
+    [HideInInspector]
+    public bool GamePlayStarted = false;
+
     public static GameManager Instance;
 
+    public GameObject[] EnableOnGameplayStart;
+
     void Awake () {
+        SetGameStarted(false);
+
         var gameManagers = FindObjectsOfType<GameManager>();
 
         if (gameManagers.Length > 1) {
@@ -29,6 +36,9 @@ public class GameManager : MonoBehaviour {
         } else {
             Instance = this;
         }
+
+        if (GameObject.FindGameObjectWithTag("IntroSequence") == null) SetGameStarted(true);
+
     }
 
     public void AddEnergyWaste (float amount) {
@@ -36,6 +46,14 @@ public class GameManager : MonoBehaviour {
 
         if (EnergyWastage >= TargetEnergy) {
             DoGameOverEvent();
+        }
+    }
+
+    public void SetGameStarted (bool started) {
+        GamePlayStarted = started;
+
+        foreach (var obj in EnableOnGameplayStart) {
+            obj.SetActive(GamePlayStarted);
         }
     }
 
