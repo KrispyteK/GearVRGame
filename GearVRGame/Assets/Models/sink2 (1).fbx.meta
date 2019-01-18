@@ -1,23 +1,54 @@
 fileFormatVersion: 2
-guid: f66026fbbade634429caee9016c1098d
+guid: 488f4a238e239cf4d9c45502304c9088
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cube
-    100004: Lamp
-    100006: //RootNode
-    400000: Camera
-    400002: Cube
-    400004: Lamp
-    400006: //RootNode
+    100000: BezierCircle
+    100002: BezierCurve
+    100004: Camera
+    100006: Cube
+    100008: Cube.001
+    100010: Cube.002
+    100012: Lamp
+    100014: Plane
+    100016: Plane.001
+    100018: //RootNode
+    400000: BezierCircle
+    400002: BezierCurve
+    400004: Camera
+    400006: Cube
+    400008: Cube.001
+    400010: Cube.002
+    400012: Lamp
+    400014: Plane
+    400016: Plane.001
+    400018: //RootNode
     2000000: Camera
-    2100000: Material
-    2100002: Material.002
-    2300000: Cube
-    3300000: Cube
-    4300000: Cube
+    2100000: lambert1
+    2100002: Material
+    2300000: BezierCircle
+    2300002: BezierCurve
+    2300004: Cube
+    2300006: Cube.001
+    2300008: Cube.002
+    2300010: Plane
+    2300012: Plane.001
+    3300000: BezierCircle
+    3300002: BezierCurve
+    3300004: Cube
+    3300006: Cube.001
+    3300008: Cube.002
+    3300010: Plane
+    3300012: Plane.001
+    4300000: Plane.001
+    4300002: Cube.002
+    4300004: BezierCircle
+    4300006: BezierCurve
+    4300008: Plane
+    4300010: Cube.001
+    4300012: Cube
     10800000: Lamp
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

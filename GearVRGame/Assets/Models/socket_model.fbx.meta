@@ -1,23 +1,41 @@
 fileFormatVersion: 2
-guid: f66026fbbade634429caee9016c1098d
+guid: f58114add47cbfe4ea02756bdd0c36e0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cube
-    100004: Lamp
-    100006: //RootNode
-    400000: Camera
-    400002: Cube
-    400004: Lamp
-    400006: //RootNode
-    2000000: Camera
-    2100000: Material
-    2100002: Material.002
-    2300000: Cube
-    3300000: Cube
-    4300000: Cube
-    10800000: Lamp
+    100000: pCube1
+    100002: pDisc1
+    100004: pDisc2
+    100006: pTorus1
+    100008: pTorus2
+    100010: pTorus3
+    100012: //RootNode
+    100014: transform1
+    100016: transform2
+    100018: transform3
+    100020: transform4
+    100022: transform5
+    400000: pCube1
+    400002: pDisc1
+    400004: pDisc2
+    400006: pTorus1
+    400008: pTorus2
+    400010: pTorus3
+    400012: //RootNode
+    400014: transform1
+    400016: transform2
+    400018: transform3
+    400020: transform4
+    400022: transform5
+    2100000: lambert4
+    2100002: lambert5
+    2100004: lambert3
+    2300000: pDisc2
+    3300000: pDisc2
+    4300000: pDisc2
+    7400000: Take 001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -69,8 +87,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -94,7 +112,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

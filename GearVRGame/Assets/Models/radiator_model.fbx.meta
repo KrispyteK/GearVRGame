@@ -29,6 +29,10 @@ ModelImporter:
     100046: transform7
     100048: transform8
     100050: transform9
+    100052: pCube6
+    100054: pCylinder6
+    100056: pCylinder7
+    100058: pSphere1
     400000: pCube1
     400002: pCube2
     400004: pCube3
@@ -55,12 +59,21 @@ ModelImporter:
     400046: transform7
     400048: transform8
     400050: transform9
+    400052: pCube6
+    400054: pCylinder6
+    400056: pCylinder7
+    400058: pSphere1
     2100000: phongE1
     2100002: lambert4
     2100004: phong1
+    2100006: phongE2
+    2100008: lambert1
     2300000: pCube5
+    2300002: pCube6
     3300000: pCube5
+    3300002: pCube6
     4300000: pCube5
+    4300002: pCube6
   externalObjects: {}
   materials:
     importMaterials: 1

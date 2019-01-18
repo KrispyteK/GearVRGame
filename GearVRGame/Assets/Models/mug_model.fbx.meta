@@ -17,7 +17,9 @@ ModelImporter:
     400010: transform2
     2100000: blinn1
     2300000: pTorus2
+    2300002: //RootNode
     3300000: pTorus2
+    3300002: //RootNode
     4300000: pTorus2
   externalObjects: {}
   materials:

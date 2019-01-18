@@ -25,6 +25,17 @@ ModelImporter:
     100038: transform7
     100040: transform8
     100042: transform9
+    100044: pCylinder10
+    100046: pCylinder11
+    100048: pCylinder6
+    100050: pCylinder8
+    100052: pCylinder9
+    100054: pSphere10
+    100056: transform17
+    100058: transform18
+    100060: transform19
+    100062: transform20
+    100064: transform21
     400000: //RootNode
     400002: imagePlane1
     400004: imagePlane2
@@ -47,11 +58,28 @@ ModelImporter:
     400038: transform7
     400040: transform8
     400042: transform9
+    400044: pCylinder10
+    400046: pCylinder11
+    400048: pCylinder6
+    400050: pCylinder8
+    400052: pCylinder9
+    400054: pSphere10
+    400056: transform17
+    400058: transform18
+    400060: transform19
+    400062: transform20
+    400064: transform21
     2100000: lambert3
     2100002: lambert4
+    2100004: lambert6
+    2100006: lambert7
     2300000: pCube4
+    2300002: pCylinder11
     3300000: pCube4
+    3300002: pCylinder11
     4300000: pCube4
+    4300002: pCylinder11
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

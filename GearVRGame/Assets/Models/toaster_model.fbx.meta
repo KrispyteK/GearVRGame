@@ -24,9 +24,16 @@ ModelImporter:
     400016: transform3
     400018: transform4
     2100000: lambert1
+    2100002: lambert2
+    2100004: lambert5
+    2100006: lambert3
+    2100008: lambert4
     2300000: pCube5
+    2300002: pCube4
     3300000: pCube5
+    3300002: pCube4
     4300000: pCube5
+    4300002: pCube4
   externalObjects: {}
   materials:
     importMaterials: 1
