@@ -1131,8 +1131,8 @@ MonoBehaviour:
   queueAhead: 1
   useRecommendedMSAALevel: 0
   _monoscopic: 0
-  enableAdaptiveResolution: 0
-  minRenderScale: 0.7
+  enableAdaptiveResolution: 1
+  minRenderScale: 0.5
   maxRenderScale: 1
   _headPoseRelativeOffsetRotation: {x: 0, y: 0, z: 0}
   _headPoseRelativeOffsetTranslation: {x: 0, y: 0, z: 0}
