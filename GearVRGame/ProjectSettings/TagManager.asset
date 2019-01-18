@@ -18,6 +18,8 @@ TagManager:
   - Ground
   - Enemy
   - IntroSequence
+  - Occluder Static
+  - Occludee Static
   layers:
   - Default
   - TransparentFX
