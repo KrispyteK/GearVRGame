@@ -1812,16 +1812,6 @@ Prefab:
       propertyPath: AmmoDisplay
       value: 
       objectReference: {fileID: 89137090}
-    - target: {fileID: 114768174456134096, guid: 2ab8d53f303ceae46b72ca296866e180,
-        type: 2}
-      propertyPath: fadeSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114768174456134096, guid: 2ab8d53f303ceae46b72ca296866e180,
-        type: 2}
-      propertyPath: fadeLength
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
   m_IsPrefabAsset: 0
