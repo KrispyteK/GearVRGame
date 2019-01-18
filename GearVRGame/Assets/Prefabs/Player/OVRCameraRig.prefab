@@ -1108,7 +1108,7 @@ MonoBehaviour:
   allowForRealHeadRotation: 1
   realHeadMovementCompensation: 0
   rotationSpeed: 150
-  fadeSpeed: 2
+  fadeSpeed: 5
   fadeLength: 0.5
   rotateStickThreshold: 0.5
   teleportEnabled: 1
