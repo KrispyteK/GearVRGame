@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour {
 
-    public Transform PointerTransform;
+    public Remote Remote;
     public float MaxInteractRange = 3f;
     public OVRInput.Button InteractButton;
     public KeyCode InteractKey;
@@ -13,7 +13,7 @@ public class PlayerInteract : MonoBehaviour {
         if (OVRInput.GetDown(InteractButton) || Input.GetKeyDown(InteractKey)) {
             RaycastHit hit;
 
-            if (Physics.Raycast(PointerTransform.position, PointerTransform.forward, out hit, MaxInteractRange)) {
+            if (Physics.Raycast(Remote.Pointer.position, Remote.Pointer.forward, out hit, MaxInteractRange)) {
                 var interactable = hit.collider.gameObject.GetComponent<IInteractable>();
 
                 if (interactable != null) {

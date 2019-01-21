@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 4370693091686530}
   - component: {fileID: 114630931319351184}
   - component: {fileID: 65282641055617856}
+  - component: {fileID: 114484398008648786}
   m_Layer: 19
   m_Name: Toaster
   m_TagString: Appliance
@@ -751,6 +752,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnergyWastage: 20
   TimeBetweenWastage: 4
+--- !u!114 &114484398008648786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938138800757324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb768034b258f6545a86e54e82687f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114488642980410728
 MonoBehaviour:
   m_ObjectHideFlags: 1
