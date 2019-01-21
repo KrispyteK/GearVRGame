@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour {
 
+    public Transform AimSphere;
+    public LineRenderer AimLine;
     public LayerMask LayerMask;
 
     public OVRInput.Button ShootButton;
@@ -42,6 +44,8 @@ public class GunScript : MonoBehaviour {
     }
 
     void Update () {
+        MoveAimSphere();
+
         //ChargerCheck();
         if ((OVRInput.GetDown(ShootButton) || Input.GetKeyDown(ShootKey)) && currentAmmo > 0)
         {
@@ -74,6 +78,18 @@ public class GunScript : MonoBehaviour {
             {
                 target.TakeDamage(damage);
             }
+        }
+    }
+
+    void MoveAimSphere ()
+    {
+        AimLine.SetPosition(0, Muzzleflash.transform.position);
+
+        RaycastHit hitInfo;
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, Mathf.Infinity, LayerMask))
+        {
+            AimSphere.position = hitInfo.point;
+            AimLine.SetPosition(1, hitInfo.point);
         }
     }
 

@@ -743,6 +743,14 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1844661065510784, guid: 3efb4a2b7117c034f86c70a84b72d7aa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373930111540506, guid: 3efb4a2b7117c034f86c70a84b72d7aa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efb4a2b7117c034f86c70a84b72d7aa, type: 2}
   m_IsPrefabAsset: 0
@@ -2888,6 +2896,9 @@ MonoBehaviour:
   - {fileID: 771013154}
   WinGameSource: {fileID: 2126811693}
   WinGameClip: {fileID: 8300000, guid: 5d41a5c381f0d474a8a33cbd5b72047e, type: 3}
+  CameraAnchor: {fileID: 0}
+  HandAnchor: {fileID: 0}
+  pointerIsRemote: 0
   TotalTime: 0
 --- !u!4 &988932631
 Transform:

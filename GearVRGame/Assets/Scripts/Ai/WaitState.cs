@@ -6,6 +6,9 @@ using UnityEngine.AI;
 public class WaitState : StateMachineBehaviour
 {
 
+    public float MinWaitTime = 2f;
+    public float MaxWaitTime = 4f;
+
     private float startTime;
     private float waitTime;
 
@@ -13,7 +16,7 @@ public class WaitState : StateMachineBehaviour
     {
         animator.SetBool("IsWaiting", true);
 
-        waitTime = Random.Range(1f,2f);
+        waitTime = Random.Range(MinWaitTime, MaxWaitTime);
 
         startTime = Time.time;
     }

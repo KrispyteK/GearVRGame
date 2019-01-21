@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour {
     public AudioSource WinGameSource;
     public AudioClip WinGameClip;
 
+    public Transform CameraAnchor;
+    public Transform HandAnchor;
+    public bool pointerIsRemote;
+
     public float TotalTime = 0f;
 
     void Awake () {

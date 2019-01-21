@@ -29,6 +29,7 @@ public class TeleportController : MonoBehaviour {
     public float maxTeleportRange;
     public OVRInput.Button teleportButton;
     public KeyCode teleportKey;
+    public Remote Remote;
     public Transform pointerTransform; // Could be a tracked controller
     public bool allowRotation;
     public bool allowForRealHeadRotation;
@@ -44,9 +45,6 @@ public class TeleportController : MonoBehaviour {
     public bool teleportEnabled = true;
 
     public GameObject positionIndicatorPrefab;
-
-    
-
     public LayerMask teleportLayerMask;
 
 
@@ -79,7 +77,7 @@ public class TeleportController : MonoBehaviour {
              
             }
         }
-        else if (Physics.Raycast(pointerTransform.position, pointerTransform.forward, out hit, maxTeleportRange, teleportLayerMask))
+        else if (Physics.Raycast(Remote.Pointer.position, Remote.Pointer.forward, out hit, maxTeleportRange, teleportLayerMask))
         {
             TeleportPoint tp = hit.collider.gameObject.GetComponent<TeleportPoint>();
             if (tp != null) {
