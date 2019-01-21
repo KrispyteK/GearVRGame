@@ -1381,7 +1381,7 @@ public class OVRInspector : MonoBehaviour
 #endif
 		   )
 		{
-			return true;
+			return false;
 		}
 
 		return false;
