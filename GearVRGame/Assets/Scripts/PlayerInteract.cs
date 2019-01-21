@@ -13,7 +13,7 @@ public class PlayerInteract : MonoBehaviour {
         if (OVRInput.GetDown(InteractButton) || Input.GetKeyDown(InteractKey)) {
             RaycastHit hit;
 
-            if (Physics.Raycast(Remote.Pointer.position, Remote.Pointer.forward, out hit, MaxInteractRange)) {
+            if (Physics.Raycast(Remote.GunTransform.position, Remote.GunTransform.forward, out hit, MaxInteractRange)) {
                 var interactable = hit.collider.gameObject.GetComponent<IInteractable>();
 
                 if (interactable != null) {

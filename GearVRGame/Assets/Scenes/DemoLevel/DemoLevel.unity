@@ -1268,7 +1268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &220078236
 Transform:
   m_ObjectHideFlags: 0
@@ -5207,7 +5207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &978744909
 Transform:
   m_ObjectHideFlags: 0
@@ -7412,14 +7412,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 4266249917036844, guid: b82af74540ad5a443b2dd7dc03367123, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 13.919001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4266249917036844, guid: b82af74540ad5a443b2dd7dc03367123, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 88.241005
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b82af74540ad5a443b2dd7dc03367123, type: 2}
   m_IsPrefabAsset: 0
@@ -7584,14 +7576,6 @@ Prefab:
     - target: {fileID: 4662965848472538, guid: 2839020074d9f69428ab2330ee66bbb8, type: 2}
       propertyPath: m_RootOrder
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973261126976214, guid: 2839020074d9f69428ab2330ee66bbb8, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1810816811937654, guid: 2839020074d9f69428ab2330ee66bbb8, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2839020074d9f69428ab2330ee66bbb8, type: 2}
@@ -8734,6 +8718,11 @@ Prefab:
     - target: {fileID: 4622442850806836, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472480082923352, guid: 2ab8d53f303ceae46b72ca296866e180,
+        type: 2}
+      propertyPath: MaxInteractRange
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}

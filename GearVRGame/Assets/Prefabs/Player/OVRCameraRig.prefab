@@ -1936,7 +1936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Remote: {fileID: 114881949124068046}
-  MaxInteractRange: 6
+  MaxInteractRange: 10
   InteractButton: 512
   InteractKey: 324
 --- !u!114 &114768174456134096
