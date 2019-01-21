@@ -89,6 +89,11 @@ public class GunScript : MonoBehaviour {
         {
             AimSphere.position = hitInfo.point;
             AimLine.SetPosition(1, hitInfo.point);
+        } else {
+            var point = transform.position + transform.forward * 10f;
+
+            AimSphere.position = point;
+            AimLine.SetPosition(1, point);
         }
     }
 
