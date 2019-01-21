@@ -8719,11 +8719,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114472480082923352, guid: 2ab8d53f303ceae46b72ca296866e180,
-        type: 2}
-      propertyPath: MaxInteractRange
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab8d53f303ceae46b72ca296866e180, type: 2}
   m_IsPrefabAsset: 0
