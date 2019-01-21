@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour {
-
     public Transform AimSphere;
     public LineRenderer AimLine;
     public LayerMask LayerMask;
@@ -65,7 +64,7 @@ public class GunScript : MonoBehaviour {
     void Shoot ()
     {
         RaycastHit hitInfo;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, Mathf.Infinity, LayerMask)){
+        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, Mathf.Infinity, LayerMask)){
             Target target = hitInfo.transform.GetComponent<Target>();
 
             var effect = Instantiate(ShootEffectPrefab);
@@ -86,7 +85,7 @@ public class GunScript : MonoBehaviour {
         AimLine.SetPosition(0, Muzzleflash.transform.position);
 
         RaycastHit hitInfo;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, Mathf.Infinity, LayerMask))
+        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, Mathf.Infinity, LayerMask))
         {
             AimSphere.position = hitInfo.point;
             AimLine.SetPosition(1, hitInfo.point);
@@ -95,7 +94,7 @@ public class GunScript : MonoBehaviour {
 
     void Reload () {
         RaycastHit hitInfo;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, Mathf.Infinity, LayerMask) && hitInfo.transform.tag == "Charger") {
+        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, Mathf.Infinity, LayerMask) && hitInfo.transform.tag == "Charger") {
             Charger = hitInfo.transform.gameObject;
 
             if (Charger != null) {

@@ -27,7 +27,7 @@ public class Remote : MonoBehaviour {
     {
         Gun.transform.SetParent(GunTransform);
         Gun.transform.localPosition = Vector3.zero;
-
+        Gun.transform.localRotation = Quaternion.Euler(0, 0, 0);
         
     }
 
