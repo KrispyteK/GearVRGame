@@ -58,7 +58,7 @@ public class GunScript : MonoBehaviour {
             Reload();
         }
 
-        AmmoDisplay.GetComponent<Text>().text = "" + currentAmmo;
+        AmmoDisplay.GetComponent<TextMesh>().text = "" + currentAmmo;
 
     }
     void Shoot ()
