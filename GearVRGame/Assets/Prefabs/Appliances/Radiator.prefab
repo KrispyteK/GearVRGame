@@ -242,9 +242,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094686948682270}
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 1.705, y: 27.43326, z: -46.635}
-  m_LocalScale: {x: 1.6267003, y: 1.6267, z: 1.6267003}
+  m_LocalRotation: {x: -0, y: 0.7069904, z: -0, w: 0.7072231}
+  m_LocalPosition: {x: -3.685, y: 27.43326, z: -46.148}
+  m_LocalScale: {x: 1.6266998, y: 1.6267, z: 1.6266998}
   m_Children:
   - {fileID: 4304086190074920}
   - {fileID: 4510860573184100}
@@ -252,7 +252,7 @@ Transform:
   - {fileID: 4554284462541296}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -89.628006, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.981, z: 0}
 --- !u!4 &4276071387267040
 Transform:
   m_ObjectHideFlags: 1
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f15737564f5c15478109068192b9d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnergyWastage: 200
+  EnergyWastage: 150
   TimeBetweenWastage: 4
 --- !u!114 &114713928806222630
 MonoBehaviour:
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f15737564f5c15478109068192b9d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnergyWastage: 300
+  EnergyWastage: 250
   TimeBetweenWastage: 4
 --- !u!198 &198814715567449480
 ParticleSystem:

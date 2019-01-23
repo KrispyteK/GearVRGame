@@ -38,8 +38,12 @@ public class GameManager : MonoBehaviour {
 
     public float TotalTime = 0f;
 
+    public GameObject Player;
+
     void Awake () {
         SetGameStarted(false);
+
+        Player = GameObject.FindGameObjectWithTag("Player");
 
         var gameManagers = FindObjectsOfType<GameManager>();
 
@@ -83,6 +87,24 @@ public class GameManager : MonoBehaviour {
     void DoGameOverEvent () {
         SetGameStarted(false);
         print("GAME OVER");
+
+        StartCoroutine(doFade());
+    }
+
+    IEnumerator doFade ()
+    {
+        float fadeLevel = 0;
+
+        while (fadeLevel < 1)
+        {
+            yield return null;
+            fadeLevel += 1.5f * Time.deltaTime;
+            fadeLevel = Mathf.Clamp01(fadeLevel);
+
+            OVRInspector.instance.fader.SetFadeLevel(fadeLevel);
+        }
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 
     void DoWinEvent() {
